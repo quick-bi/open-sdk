@@ -1,0 +1,40 @@
+{
+  "name": "create-qbi-app",
+  "version": "1.0.0",
+  "description": "Create a new Quick BI project",
+  "author": "Quick BI",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "format": "prettier --write src",
+    "lint": "eslint src"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "template-*"
+  ],
+  "bin": {
+    "create-qbi-app": "bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quick-bi/open-sdk.git",
+    "directory": "packages/create-qbi-app"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "Quick BI"
+  ],
+  "dependencies": {
+    "@clack/prompts": "^0.11.0",
+    "cac": "^6.7.14"
+  }
+}

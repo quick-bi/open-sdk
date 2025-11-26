@@ -1,0 +1,58 @@
+{
+  "name": "@quickbi/qbi-dev-tools",
+  "version": "4.0.0",
+  "description": "Command line tool for developing component for Quick BI",
+  "author": "Quick BI",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "bin": {
+    "qdt": "bin/index.js"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quick-bi/open-sdk.git",
+    "directory": "packages/qbi-dev-tools"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "Quick BI"
+  ],
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "format": "prettier --write src",
+    "lint": "eslint src",
+    "prepublishOnly": "npm run build"
+  },
+  "private": true,
+  "dependencies": {
+    "@rspack/core": "^1.6.3",
+    "@rspack/dev-server": "^1.1.4",
+    "cac": "^6.7.14",
+    "compressing": "^2.0.0",
+    "css-loader": "^7.1.2",
+    "es-module-lexer": "^1.7.0",
+    "less-loader": "^12.3.0",
+    "node-forge": "^1.3.1",
+    "sass-embedded": "^1.93.3",
+    "sass-loader": "^16.0.6"
+  }
+}
