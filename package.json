@@ -4,7 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "build": "pnpm -r --filter='./packages/*' run build"
   },
   "engines": {
     "node": ">=20.19.0"
@@ -21,18 +22,26 @@
   "license": "MIT",
   "packageManager": "pnpm@10.6.3",
   "devDependencies": {
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
     "@eslint/js": "^9.39.0",
+    "@quickbi/qbi-dev-tools": "workspace:*",
     "@rslib/core": "^0.18.0",
     "@types/node": "^24.10.1",
+    "create-qbi-app": "workspace:*",
     "eslint": "^9.39.0",
     "globals": "^16.4.0",
+    "husky": "^9.1.7",
     "lint-staged": "^16.2.6",
     "prettier": "^3.6.2",
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.4",
-    "@quickbi/qbi-dev-tools": "workspace:*",
-    "create-qbi-app": "workspace:*"
+    "typescript-eslint": "^8.46.4"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   },
   "pnpm": {
     "overrides": {

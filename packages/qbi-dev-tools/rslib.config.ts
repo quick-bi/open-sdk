@@ -4,7 +4,7 @@ export default defineConfig({
   lib: [
     {
       format: 'esm',
-      syntax: ['node 18'],
+      syntax: ['node 20'],
       source: {
         entry: {
           index: './src/index.ts',
@@ -15,7 +15,7 @@ export default defineConfig({
     },
     {
       format: 'cjs',
-      syntax: ['node 18'],
+      syntax: ['node 20'],
       source: {
         entry: {
           index: './src/index.ts',
