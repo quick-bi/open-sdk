@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "build": "pnpm -r --filter='./packages/*' run build"
+    "build": "pnpm -r --filter='./packages/*' run build",
+    "prepare": "husky"
   },
   "engines": {
     "node": ">=20.19.0"
@@ -37,11 +38,6 @@
     "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.4"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "echo HUSKY_GIT_PARAMS"
-    }
   },
   "pnpm": {
     "overrides": {
