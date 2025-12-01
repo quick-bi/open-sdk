@@ -1,1 +1,1 @@
-echo HUSKY_GIT_PARAMS
+commitlint --edit $1
