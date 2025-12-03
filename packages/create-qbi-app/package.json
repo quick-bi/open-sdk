@@ -28,7 +28,8 @@
     "directory": "packages/create-qbi-app"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "keywords": [
     "Quick BI"
