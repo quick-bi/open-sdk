@@ -40,8 +40,7 @@
     "build": "rslib build",
     "dev": "rslib build --watch",
     "format": "prettier --write src",
-    "lint": "eslint src",
-    "prepublishOnly": "npm run build"
+    "lint": "eslint src"
   },
   "dependencies": {
     "@rspack/core": "^1.6.3",
