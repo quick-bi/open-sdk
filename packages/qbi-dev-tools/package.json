@@ -1,6 +1,6 @@
 {
   "name": "@quickbi/qbi-dev-tools",
-  "version": "4.0.0",
+  "version": "1.0.0-beta.1",
   "description": "Command line tool for developing component for Quick BI",
   "author": "Quick BI",
   "license": "MIT",
@@ -24,7 +24,8 @@
     "directory": "packages/qbi-dev-tools"
   },
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "keywords": [
     "Quick BI"
@@ -42,7 +43,6 @@
     "lint": "eslint src",
     "prepublishOnly": "npm run build"
   },
-  "private": true,
   "dependencies": {
     "@rspack/core": "^1.6.3",
     "@rspack/dev-server": "^1.1.4",
