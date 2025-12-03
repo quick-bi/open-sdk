@@ -127,9 +127,10 @@ export function getBuiltinConfig({ mode = 'development' }: Option): Configuratio
     },
     resolveLoader: {
       modules: [
-        'node_modules',
+        path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../../../'), // pnpm
         path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../node_modules'),
         path.resolve(process.cwd(), 'node_modules'),
+        'node_modules',
       ],
     },
     resolve: {
