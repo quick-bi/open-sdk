@@ -26,7 +26,7 @@ export async function createApp(projectName: string, template: string) {
   doneMessage += `Create Success. Now run:\n`;
   doneMessage += `\n  cd ${path.relative(process.cwd(), targetDir)}`;
   doneMessage += `\n  ${[pkgManager, 'install'].join(' ')}`;
-  doneMessage += `\n  ${[pkgManager, 'dev'].join(' ')}`;
+  doneMessage += `\n  ${[pkgManager, 'run start'].join(' ')}`;
 
   return doneMessage;
 }
