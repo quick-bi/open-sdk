@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import { pathToFileURL } from 'node:url';
 import type { Configuration } from '@rspack/core';
 
 export function shutdown(proc: NodeJS.Process, fn: (code?: number) => void) {
@@ -90,7 +91,8 @@ export function safeParseJson(json: string, defaultValue: any = null) {
 
 export async function getRspackConfig(configFile: string): Promise<Configuration> {
   if (fs.existsSync(configFile)) {
-    const { default: defineConfig } = await import(configFile);
+    // 使用 pathToFileURL 确保在 Windows 上路径被正确转换为 file:// URL
+    const { default: defineConfig } = await import(pathToFileURL(configFile).href);
 
     return defineConfig;
   } else {
