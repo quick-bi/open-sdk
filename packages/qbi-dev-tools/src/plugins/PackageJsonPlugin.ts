@@ -3,6 +3,7 @@ import { Compilation, sources } from '@rspack/core';
 import { safeReadJson } from '../utils';
 import path from 'node:path';
 import fs from 'node:fs';
+import { pathToFileURL } from 'node:url';
 import { init, parse } from 'es-module-lexer';
 
 const name = 'PackageJsonPlugin';
@@ -62,9 +63,10 @@ async function getRevisalLatestVersion(lib: string) {
             libEntry = path.resolve(libEntry, 'index.js');
           }
 
+          // 使用 pathToFileURL 确保在 Windows 上路径被正确转换为 file:// URL
           const {
             default: { LATEST_VERSION },
-          } = await import(libEntry);
+          } = await import(pathToFileURL(libEntry).href);
           return LATEST_VERSION as string;
         }
       }
