@@ -8,10 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write # to create release (changesets/action)
-      pull-requests: write # to create pull request (changesets/action)
-      id-token: write #  required for provenance and oidc publish
+    # permissions:
+    #   contents: write # to create release (changesets/action)
+    #   pull-requests: write # to create pull request (changesets/action)
+    #   id-token: write #  required for provenance and oidc publish
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -43,4 +43,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Use OIDC for npm authentication instead of NPM_TOKEN
-          NPM_TOKEN: '' # https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
+          # NPM_TOKEN: '' # https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
