@@ -63,7 +63,7 @@ async function getRevisalLatestVersion(lib: string) {
             libEntry = path.resolve(libEntry, 'index.js');
           }
 
-          // 使用 pathToFileURL 确保在 Windows 上路径被正确转换为 file:// URL
+          // windows path support
           const {
             default: { LATEST_VERSION },
           } = await import(pathToFileURL(libEntry).href);
