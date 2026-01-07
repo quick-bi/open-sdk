@@ -5,8 +5,8 @@ class MyComponent {
   render(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
     const viewConfig = props.customProps!.viewConfig;
 
-    props.container!.textContent = `I ${viewConfig.fruit?.apple ? 'like' : "don't like"} apple, I want to eat ${
-      viewConfig.fruit?.banana
+    props.container!.textContent = `I ${viewConfig?.fruit?.apple ? 'like' : "don't like"} apple, I want to eat ${
+      viewConfig?.fruit?.banana
     } banana`;
   }
 
