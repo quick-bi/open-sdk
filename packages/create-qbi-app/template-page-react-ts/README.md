@@ -1,4 +1,4 @@
-# Quick BI Custom Chart
+# Quick BI Custom Page
 
 ## Setup
 

@@ -10,11 +10,7 @@ class MyComponent {
     const title = document.createElement('h1');
     title.textContent = 'Custom Page';
 
-    const subtitle = document.createElement('h3');
-    subtitle.textContent = 'Everything is created by yourself';
-
     props.container!.appendChild(title);
-    props.container!.appendChild(subtitle);
   }
 
   /**
