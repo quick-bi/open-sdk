@@ -1,5 +1,11 @@
 # create-qbi-app
 
+## 1.0.3
+
+### Patch Changes
+
+- e3b940b: feat: add custom page template
+
 ## 1.0.2
 
 ### Patch Changes
