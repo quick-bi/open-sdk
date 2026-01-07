@@ -60,21 +60,25 @@ const prompts: PromptOption[] = [
       },
     ],
   },
-  // {
-  //   label: 'Custom Page',
-  //   value: 'page',
-  //   link: '',
-  //   children: [
-  //     {
-  //       label: 'React + TypeScript',
-  //       value: 'react-ts',
-  //     },
-  //     {
-  //       label: 'Vue + TypeScript',
-  //       value: 'vue-ts',
-  //     },
-  //   ],
-  // },
+  {
+    label: 'Custom Page',
+    value: 'page',
+    link: '',
+    children: [
+      {
+        label: 'React + TypeScript',
+        value: 'react-ts',
+      },
+      {
+        label: 'Vue + TypeScript',
+        value: 'vue-ts',
+      },
+      {
+        label: 'Vanilla + TypeScript',
+        value: 'vanilla-ts',
+      },
+    ],
+  },
 ];
 
 export async function cli() {

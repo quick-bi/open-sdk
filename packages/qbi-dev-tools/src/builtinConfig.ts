@@ -72,6 +72,13 @@ export function getBuiltinConfig({ mode = 'development' }: Option): Configuratio
           use: [swcrc('js')],
         },
         {
+          test: /\.m?js$/,
+          include: /node_modules/,
+          resolve: {
+            fullySpecified: false,
+          },
+        },
+        {
           test: /\.css$/,
           exclude: /\.module\.css$/,
           use: styleSheetLoaders({ mode, loader: 'css-loader' }),
