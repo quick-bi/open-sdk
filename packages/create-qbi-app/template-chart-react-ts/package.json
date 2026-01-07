@@ -13,7 +13,7 @@
     "bi-open-react-sdk": "^2.1.16"
   },
   "devDependencies": {
-    "@quickbi/qbi-dev-tools": "1.0.1",
+    "@quickbi/qbi-dev-tools": "1.0.2",
     "@types/react": "^16.14.0",
     "@types/react-dom": "^16.9.4",
     "prettier": "^3.6.2",
