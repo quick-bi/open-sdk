@@ -1,5 +1,5 @@
 import { defineConfig } from '@quickbi/qbi-dev-tools';
-import { VueLoaderPlugin } from 'vue-loader';
+import { VueLoaderPlugin } from 'rspack-vue-loader';
 
 export default defineConfig({
   entry: {
@@ -17,7 +17,7 @@ export default defineConfig({
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
+        loader: 'rspack-vue-loader',
         options: {
           experimentalInlineMatchResource: true,
         },
