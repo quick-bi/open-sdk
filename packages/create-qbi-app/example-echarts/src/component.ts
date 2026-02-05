@@ -1,6 +1,7 @@
 import type { Interfaces } from 'bi-open-sdk';
 import { I18n } from 'bi-open-sdk';
-import * as echarts from 'echarts';
+import type { ECharts } from 'echarts';
+import { init } from 'echarts';
 import './component.scss';
 
 const i18n = I18n.init({
@@ -12,7 +13,7 @@ const i18n = I18n.init({
 });
 
 class MyComponent {
-  chart!: echarts.ECharts;
+  chart!: ECharts;
 
   lastSize!: {
     width: number;
@@ -184,11 +185,7 @@ class MyComponent {
   mount(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
     if (!props.container) return;
     props.container.classList.add('test-component');
-    if (!echarts) {
-      props.container.textContent = '无法获取 echarts, 请确保已经配置并加载了 echarts.js';
-      return;
-    }
-    this.chart = echarts.init(props.container as HTMLDivElement);
+    this.chart = init(props.container as HTMLDivElement);
 
     this.bindEvents(props);
     this.setOption(props);

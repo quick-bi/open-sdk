@@ -17,5 +17,6 @@ export default defineConfig({
     react: 'React',
     'react-dom': 'ReactDOM',
     moment: 'moment',
+    echarts: 'echarts',
   },
 });

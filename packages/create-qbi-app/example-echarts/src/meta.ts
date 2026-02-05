@@ -45,7 +45,10 @@ const componentMeta: Interfaces.ComponentMeta = {
                 defaultValue: 0,
                 props: {
                   placeholder: i18n.t('请输出起始角度'),
-                  maxLength: 140,
+                  min: 0,
+                  step: 1,
+                  precision: 0,
+                  max: 360,
                 },
               },
             },
