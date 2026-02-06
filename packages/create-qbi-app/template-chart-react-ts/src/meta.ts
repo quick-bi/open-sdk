@@ -1,4 +1,4 @@
-import type { Interfaces } from 'bi-open-react-sdk';
+import type { Interfaces } from '@quickbi/bi-open-react-sdk';
 
 const componentMeta: Interfaces.ComponentMeta = {
   propsSchema: {

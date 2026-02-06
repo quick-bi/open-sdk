@@ -1,5 +1,5 @@
-import type { Interfaces } from 'bi-open-sdk';
-import { I18n } from 'bi-open-sdk';
+import type { Interfaces } from '@quickbi/bi-open-sdk';
+import { I18n } from '@quickbi/bi-open-sdk';
 
 const i18n = I18n.init({
   resources: {

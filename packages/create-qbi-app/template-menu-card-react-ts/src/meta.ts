@@ -1,4 +1,4 @@
-import type { Interfaces } from 'bi-open-menu-sdk';
+import type { Interfaces } from '@quickbi/bi-open-menu-sdk';
 
 const menuMeta: Interfaces.MenuMeta = {};
 

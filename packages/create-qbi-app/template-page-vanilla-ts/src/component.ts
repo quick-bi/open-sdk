@@ -1,4 +1,4 @@
-import type { Interfaces } from 'bi-open-sdk';
+import type { Interfaces } from '@quickbi/bi-open-sdk';
 import './index.scss';
 
 class MyComponent {

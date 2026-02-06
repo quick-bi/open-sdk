@@ -1,5 +1,6 @@
 import React from 'react';
-import { Interfaces, MenuItem } from 'bi-open-menu-sdk';
+import type { Interfaces } from '@quickbi/bi-open-menu-sdk';
+import { MenuItem } from '@quickbi/bi-open-menu-sdk';
 import { ModalContent } from './ModalContent';
 
 export const MyCardMenu: React.FC<Interfaces.MenuComponentChartProps> = React.memo(props => {

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Interfaces, MenuItem } from 'bi-open-menu-sdk';
+import type { Interfaces } from '@quickbi/bi-open-menu-sdk';
+import { MenuItem } from '@quickbi/bi-open-menu-sdk';
 
 export const MyCardMenu: React.FC<Interfaces.MenuComponentDashboardProps> = React.memo(props => {
   const handleClick = React.useCallback(

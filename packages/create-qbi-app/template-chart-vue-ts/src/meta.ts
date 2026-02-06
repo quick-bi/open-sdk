@@ -1,4 +1,4 @@
-import type { Interfaces } from 'bi-open-vue-sdk';
+import type { Interfaces } from '@quickbi/bi-open-vue-sdk';
 
 const componentMeta: Interfaces.ComponentMeta = {
   propsSchema: {

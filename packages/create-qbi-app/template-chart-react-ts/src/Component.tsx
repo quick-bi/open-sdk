@@ -1,5 +1,5 @@
 import React from 'react';
-import type { Interfaces } from 'bi-open-react-sdk';
+import type { Interfaces } from '@quickbi/bi-open-react-sdk';
 import './index.scss';
 
 const MyComponent: React.FC<Interfaces.ComponentProps> = React.memo(props => {
