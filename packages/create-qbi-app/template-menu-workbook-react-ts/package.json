@@ -13,7 +13,7 @@
     "@quickbi/bi-open-menu-sdk": "^1.0.0"
   },
   "devDependencies": {
-    "@quickbi/qbi-dev-tools": "1.0.2",
+    "@quickbi/qbi-dev-tools": "^1.0.3",
     "prettier": "^3.6.2",
     "@eslint/js": "^9.39.0",
     "globals": "^16.4.0",
