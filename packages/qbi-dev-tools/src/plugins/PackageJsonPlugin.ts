@@ -8,7 +8,18 @@ import { init, parse } from 'es-module-lexer';
 
 const name = 'PackageJsonPlugin';
 const member = 'createBIComponent';
-const libs = ['bi-open-sdk', 'bi-open-react-sdk', 'bi-open-vue-sdk', 'bi-open-menu-sdk', 'bi-open'];
+const libs = [
+  '@quickbi/bi-open',
+  '@quickbi/bi-open-sdk',
+  '@quickbi/bi-open-react-sdk',
+  '@quickbi/bi-open-vue-sdk',
+  '@quickbi/bi-open-menu-sdk',
+  'bi-open',
+  'bi-open-sdk',
+  'bi-open-react-sdk',
+  'bi-open-vue-sdk',
+  'bi-open-menu-sdk',
+];
 
 export class PackageJsonPlugin {
   private mainEntry: string;
@@ -51,11 +62,14 @@ export class PackageJsonPlugin {
   }
 }
 
-async function getRevisalLatestVersion(lib: string) {
+async function getRevisalLatestVersion(lib: string): Promise<string | undefined> {
   const mod = path.resolve(process.cwd(), `node_modules`, lib);
   if (fs.existsSync(mod)) {
     try {
       const packageJson = safeReadJson(path.resolve(mod, 'package.json'));
+      if (packageJson.revisalInfo?.version) {
+        return packageJson.revisalInfo.version;
+      }
       if (packageJson.main) {
         let libEntry = path.resolve(mod, packageJson.main);
         if (fs.existsSync(libEntry)) {
@@ -67,13 +81,13 @@ async function getRevisalLatestVersion(lib: string) {
           const {
             default: { LATEST_VERSION },
           } = await import(pathToFileURL(libEntry).href);
-          return LATEST_VERSION as string;
+          return LATEST_VERSION;
         }
       }
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (e: any) {
       console.error(e);
-      // return '4.1'
+      return '4.1';
     }
   }
 }

@@ -8,7 +8,7 @@ Scaffolding your Quick BI custom component project.
 
 ### npm
 
-```
+```bash
 npm init qbi-app@latest my-app
 cd my-app
 npm i
@@ -17,7 +17,7 @@ npm run start
 
 ### pnpm
 
-```
+```bash
 pnpm create qbi-app my-app
 cd my-app
 pnpm i
@@ -26,7 +26,7 @@ pnpm start
 
 ### yarn
 
-```
+```bash
 yarn create qbi-app my-app
 cd my-app
 yarn i

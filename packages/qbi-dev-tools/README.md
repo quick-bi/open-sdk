@@ -8,19 +8,19 @@ This is a building tool for Quick BI custom components.
 
 with npm:
 
-```
+```bash
 npm i -D qbi-dev-tools
 ```
 
 with pnpm:
 
-```
+```bash
 pnpm add -D qbi-dev-tools
 ```
 
 with yarn:
 
-```
+```bash
 yarn add -D qbi-dev-tools
 ```
 
@@ -28,7 +28,8 @@ yarn add -D qbi-dev-tools
 
 add a file named `qbi.config.ts` to your project root directory.
 
-```qbi.config.ts
+```ts
+// qbi.config.ts
 import { defineConfig } from '@quickbi/qbi-dev-tools';
 
 export default defineConfig({
@@ -49,19 +50,19 @@ export default defineConfig({
 
 ### starting dev server
 
-```
+```bash
 qdt start
 ```
 
 ### building the project
 
-```
+```bash
 qdt build
 ```
 
 ### bundle the project
 
-```
+```bash
 qdt bundle
 ```
 
