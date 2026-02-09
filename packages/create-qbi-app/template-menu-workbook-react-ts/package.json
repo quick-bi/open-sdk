@@ -10,9 +10,11 @@
     "format": "prettier --write src"
   },
   "dependencies": {
-    "@quickbi/bi-open-menu-sdk": "^1.0.0"
+    "@quickbi/bi-open-menu-sdk": "^1.0.2"
   },
   "devDependencies": {
+    "@types/react": "^16.14.0",
+    "@types/react-dom": "^16.9.4",
     "@quickbi/qbi-dev-tools": "^1.0.3",
     "prettier": "^3.6.2",
     "@eslint/js": "^9.39.0",

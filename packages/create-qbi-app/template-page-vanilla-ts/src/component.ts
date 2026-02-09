@@ -1,39 +1,32 @@
 import type { Interfaces } from '@quickbi/bi-open-sdk';
-import './index.scss';
+import './component.scss';
 
 class MyComponent {
-  render(props: Interfaces.LifecycleProps<Interfaces.CustomPageProps>) {
-    console.log(props);
-
-    props.container!.innerHTML = '';
-
-    const title = document.createElement('h1');
-    title.textContent = 'Custom Page';
-
-    props.container!.appendChild(title);
+  render(props: Interfaces.LifecycleProps<Interfaces.PageComponentProps>) {
+    props.container!.textContent = 'My Custom Page';
   }
 
   /**
    * trigger when component mounted
    */
-  mount(props: Interfaces.LifecycleProps<Interfaces.CustomPageProps>) {
+  mount(props: Interfaces.LifecycleProps<Interfaces.PageComponentProps>) {
     props.container!.classList.add('custom-page');
-    console.log('trigger when component mount');
+    console.log('trigger when component mount', props);
     this.render(props);
   }
 
   /**
    * trigger when component updated
    */
-  update(props: Interfaces.LifecycleProps<Interfaces.CustomPageProps>) {
-    console.log('trigger when component update');
+  update(props: Interfaces.LifecycleProps<Interfaces.PageComponentProps>) {
+    console.log('trigger when component update', props);
     this.render(props);
   }
 
   /**
    * trigger when component unmount
    */
-  unmount(props: Interfaces.LifecycleProps<Interfaces.CustomPageProps>) {
+  unmount(props: Interfaces.LifecycleProps<Interfaces.PageComponentProps>) {
     console.log('trigger when component unmount', props);
   }
 }

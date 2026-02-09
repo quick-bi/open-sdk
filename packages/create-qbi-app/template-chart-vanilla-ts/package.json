@@ -10,7 +10,7 @@
     "format": "prettier --write src"
   },
   "dependencies": {
-    "@quickbi/bi-open-sdk": "^4.0.0"
+    "@quickbi/bi-open-sdk": "^4.0.2"
   },
   "devDependencies": {
     "@quickbi/qbi-dev-tools": "^1.0.3",

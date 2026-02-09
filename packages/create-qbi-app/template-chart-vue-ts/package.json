@@ -10,7 +10,7 @@
     "format": "prettier --write src"
   },
   "dependencies": {
-    "@quickbi/bi-open-vue-sdk": "^1.0.0",
+    "@quickbi/bi-open-vue-sdk": "^1.0.3",
     "vue": "^3.0.11"
   },
   "devDependencies": {

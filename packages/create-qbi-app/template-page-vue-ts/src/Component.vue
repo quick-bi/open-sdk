@@ -1,6 +1,6 @@
 <template>
   <div class="custom-page">
-    <h1>Custom Page</h1>
+    <h1>My Custom Page</h1>
   </div>
 </template>
 

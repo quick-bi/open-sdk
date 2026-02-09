@@ -1,5 +1,5 @@
 import type { Interfaces } from '@quickbi/bi-open-sdk';
-import './index.scss';
+import './component.scss';
 
 class MyComponent {
   render(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {

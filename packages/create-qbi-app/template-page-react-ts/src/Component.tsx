@@ -1,10 +1,10 @@
 import React from 'react';
-import './index.scss';
+import './Component.scss';
 
 const MyComponent: React.FC = React.memo(() => {
   return (
     <div className="custom-page">
-      <h1>Custom Page</h1>
+      <h1>My Custom Page</h1>
     </div>
   );
 });

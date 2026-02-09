@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Interfaces } from '@quickbi/bi-open-react-sdk';
-import './index.scss';
+import './Component.scss';
 
 const MyComponent: React.FC<Interfaces.ComponentProps> = React.memo(props => {
   const viewConfig = props.viewConfig;
