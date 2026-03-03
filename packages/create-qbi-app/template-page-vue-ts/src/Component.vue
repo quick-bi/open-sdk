@@ -7,6 +7,9 @@
 <script lang="ts">
 export default {
   props: ['container', 'customProps'],
+  mounted() {
+    console.log('trigger when component mount', this.$props);
+  },
 };
 </script>
 

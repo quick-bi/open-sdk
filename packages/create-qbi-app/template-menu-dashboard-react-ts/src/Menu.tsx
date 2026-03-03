@@ -4,7 +4,7 @@ import { MenuItem } from '@quickbi/bi-open-menu-sdk';
 
 export const MyCardMenu: React.FC<Interfaces.MenuComponentDashboardProps> = React.memo(props => {
   const handleClick = React.useCallback(() => {
-    console.log(props);
+    console.log("props", props);
   }, [props]);
 
   return (

@@ -13,7 +13,7 @@ const prompts: PromptOption[] = [
   {
     label: 'Custom Chart',
     value: 'chart',
-    link: 'https://help.aliyun.com/zh/quick-bi/user-guide/getting-started-1?spm=a2c4g.11186623.help-menu-30343.d_2_10_4_0.7e3e4cb8zLQhF4',
+    link: 'https://help.aliyun.com/zh/quick-bi/user-guide/overview-of-custom-visualization?spm=a2c4g.11186623.help-menu-30343.d_2_10_4_0.2f795fb0wvme21&scm=20140722.H_3019886._.OR_help-T_cn~zh-V_1#cbf445b163edb',
     children: [
       {
         label: 'React + TypeScript',
@@ -32,7 +32,7 @@ const prompts: PromptOption[] = [
   {
     label: 'Custom Menu of Chart',
     value: 'menu-chart',
-    link: 'https://help.aliyun.com/zh/quick-bi/user-guide/terms-related-to-custom-menu?spm=a2c4g.11186623.help-menu-30343.d_2_10_5_0.26344cb8tOrs5r&scm=20140722.H_2743690._.OR_help-T_cn~zh-V_1',
+    link: 'https://help.aliyun.com/zh/quick-bi/user-guide/overview-of-custom-visualization?spm=a2c4g.11186623.help-menu-30343.d_2_10_4_0.2f795fb0wvme21&scm=20140722.H_3019886._.OR_help-T_cn~zh-V_1#b253a53779gj8',
     children: [
       {
         label: 'React + TypeScript',
@@ -63,7 +63,7 @@ const prompts: PromptOption[] = [
   {
     label: 'Custom Page',
     value: 'page',
-    link: '',
+    link: 'https://help.aliyun.com/zh/quick-bi/user-guide/overview-of-custom-visualization?spm=a2c4g.11186623.help-menu-30343.d_2_10_4_0.2f795fb0wvme21&scm=20140722.H_3019886._.OR_help-T_cn~zh-V_1#4268b3c9d7r3w',
     children: [
       {
         label: 'React + TypeScript',

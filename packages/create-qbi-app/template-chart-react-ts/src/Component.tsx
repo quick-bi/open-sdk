@@ -9,6 +9,10 @@ const MyComponent: React.FC<Interfaces.ComponentProps> = React.memo(props => {
     viewConfig.fruit?.banana
   } banana`;
 
+  React.useEffect(() => {
+    console.log('trigger when component mount', props);
+  }, [])
+
   return <div>{text}</div>;
 });
 

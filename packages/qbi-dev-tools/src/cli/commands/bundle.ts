@@ -20,8 +20,6 @@ export default async (option: PackOption) => {
     stream.addEntry(subpath);
   }
 
-  stream.addEntry(packageJSONFile);
-
   const writeStream = fs.createWriteStream(path.resolve(process.cwd(), `${name}.zip`));
 
   await new Promise<void>((res, rej) => {

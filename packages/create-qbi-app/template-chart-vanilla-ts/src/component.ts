@@ -15,7 +15,7 @@ class MyComponent {
    */
   mount(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
     props.container!.classList.add('test-component');
-    console.log('trigger when component mount');
+    console.log('trigger when component mount', props);
     this.render(props);
   }
 
@@ -23,7 +23,7 @@ class MyComponent {
    * trigger when component updated
    */
   update(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
-    console.log('trigger when component update');
+    console.log('trigger when component update', props);
     this.render(props);
   }
 
