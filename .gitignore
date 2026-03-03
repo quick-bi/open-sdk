@@ -145,3 +145,6 @@ vite.config.ts.timestamp-*
 
 # IDEs and editors
 .qoder
+
+# Example directory
+packages/create-qbi-app/example/

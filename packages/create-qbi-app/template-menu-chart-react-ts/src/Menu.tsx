@@ -6,7 +6,7 @@ import { ModalContent } from './ModalContent';
 export const MyCardMenu: React.FC<Interfaces.MenuComponentChartProps> = React.memo(props => {
   const handleClick = React.useCallback(() => {
     console.log('props', props);
-    props.dispatch({
+    props.dispatch?.({
       type: 'openModal',
       payload: {
         title: 'My Modal Title',
