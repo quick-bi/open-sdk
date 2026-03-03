@@ -1,5 +1,11 @@
 # @quickbi/qbi-dev-tools
 
+## 1.0.4
+
+### Patch Changes
+
+- 587186c: feat: optimize template code & fix bundle error
+
 ## 1.0.3
 
 ### Patch Changes
