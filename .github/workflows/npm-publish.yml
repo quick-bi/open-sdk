@@ -8,10 +8,10 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # permissions:
-    #   contents: write # to create release (changesets/action)
-    #   pull-requests: write # to create pull request (changesets/action)
-    #   id-token: write #  required for provenance and oidc publish
+    permissions:
+      contents: write # to create release commit (changesets/action/version)
+      pull-requests: write # to create release PR (changesets/action/version)
+      id-token: write # required for npm OIDC trusted publishing
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -22,8 +22,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          # disable cache, to avoid cache poisoning (https://docs.zizmor.sh/audits/#cache-poisoning)
+          # Node 24 bundles npm >= 11.5.1, which is required for OIDC trusted publishing
+          node-version: 24
+          # disable cache, to avoid cache poisoning (https://github.com/zizmor.zizmor.sh/audits/#cache-poisoning)
           # package-manager-cache: false
 
       - name: Install Dependencies
@@ -32,16 +33,14 @@ jobs:
       - name: Build Packages
         run: pnpm run build
 
-      - name: Create Release Pull Request or Publish to npm
-        id: changesets
-        uses: changesets/action@v1
+      - name: Create Release Pull Request
+        uses: changesets/action/version@v1
         with:
-          version: pnpm run version
-          publish: pnpm exec changeset publish
-          commit: 'ci: release'
-          title: 'ci: release'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Use OIDC for npm authentication instead of NPM_TOKEN
-          # NPM_TOKEN: '' # https://github.com/changesets/changesets/issues/1152#issuecomment-3190884868
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          script: pnpm run version
+          commit-message: 'ci: release'
+          pr-title: 'ci: release'
+
+      - name: Publish to npm
+        uses: changesets/action/publish@v1
+        with:
+          script: pnpm exec changeset publish
