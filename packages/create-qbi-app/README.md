@@ -33,9 +33,29 @@ yarn i
 yarn start
 ```
 
+## Templates
+
+You can pick a template directly with the `-t` / `--template` option instead of the interactive prompts:
+
+```bash
+npm init qbi-app@latest my-app -t chart-react-ts
+```
+
+Available templates:
+
+| Component type           | Templates                                              |
+| ------------------------ | ------------------------------------------------------ |
+| Custom chart             | `chart-react-ts` / `chart-vue-ts` / `chart-vanilla-ts` |
+| Custom menu of chart     | `menu-chart-react-ts`                                  |
+| Custom menu of dashboard | `menu-dashboard-react-ts`                              |
+| Custom menu of workbook  | `menu-workbook-react-ts`                               |
+| Custom page              | `page-react-ts` / `page-vue-ts` / `page-vanilla-ts`    |
+
+The project name must start with a letter and can only contain `a-z`, `0-9`, `-`, `_`.
+
 ## Next step
 
-Please refer to the [documentation](https://help.aliyun.com/zh/quick-bi/user-guide/getting-started-1?spm=a2c4g.11186623.help-menu-30343.d_2_10_4_0.7e3e4cb8zLQhF4) on how to develop Quick-BI custom components.
+Please refer to the [documentation](https://help.aliyun.com/zh/quick-bi/user-guide/getting-started-1) on how to develop Quick-BI custom components.
 
 ## Debugging
 
