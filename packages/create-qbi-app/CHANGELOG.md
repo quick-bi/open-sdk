@@ -1,5 +1,11 @@
 # create-qbi-app
 
+## 1.0.7
+
+### Patch Changes
+
+- d5c9caf: migrate lint and format toolchain from ESLint/Prettier to oxlint/oxfmt, upgrade rspack to v2, bump template TypeScript to v7 with src/env.d.ts module declarations
+
 ## 1.0.6
 
 ### Patch Changes
