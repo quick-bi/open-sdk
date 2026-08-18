@@ -4,8 +4,10 @@ import { fileURLToPath } from 'node:url';
 
 export async function createApp(projectName: string, template: string) {
   let targetDir = path.resolve(process.cwd(), projectName);
-  if (fs.existsSync(targetDir)) {
-    targetDir = path.resolve(process.cwd(), `${projectName}_1`);
+  let suffix = 1;
+  while (fs.existsSync(targetDir)) {
+    targetDir = path.resolve(process.cwd(), `${projectName}_${suffix}`);
+    suffix += 1;
   }
 
   const templateDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), `../template-${template}`);

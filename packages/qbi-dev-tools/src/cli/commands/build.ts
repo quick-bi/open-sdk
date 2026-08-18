@@ -10,7 +10,7 @@ export default async (option: BuildOption) => {
   return new Promise<void>((resolve, reject) => {
     compiler.run(function (err, stats) {
       if (err) {
-        reject(err);
+        return reject(err);
       }
 
       if (stats && stats.hasErrors()) {

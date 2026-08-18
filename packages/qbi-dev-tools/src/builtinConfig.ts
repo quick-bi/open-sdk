@@ -91,7 +91,7 @@ export function getBuiltinConfig({ mode = 'development' }: Option): Configuratio
           sideEffects: true,
         },
         {
-          test: /\.s[a|c]ss$/,
+          test: /\.s(a|c)ss$/,
           exclude: /\.module\.(scss|sass)$/,
           use: styleSheetLoaders({ mode, loader: 'sass-loader' }),
           sideEffects: true,

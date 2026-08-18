@@ -84,7 +84,6 @@ async function getRevisalLatestVersion(lib: string): Promise<string | undefined>
           return LATEST_VERSION;
         }
       }
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (e: any) {
       console.error(e);
       return '4.1';
