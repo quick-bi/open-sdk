@@ -34,13 +34,13 @@ jobs:
         run: pnpm run build
 
       - name: Create Release Pull Request
-        uses: changesets/action/version@v1
+        uses: changesets/action/version@v2.1.0
         with:
           script: pnpm run version
           commit-message: 'ci: release'
           pr-title: 'ci: release'
 
       - name: Publish to npm
-        uses: changesets/action/publish@v1
+        uses: changesets/action/publish@v2.1.0
         with:
           script: pnpm exec changeset publish
