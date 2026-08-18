@@ -9,8 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # to create release commit (changesets/action/version)
-      pull-requests: write # to create release PR (changesets/action/version)
+      contents: write # to create release commit (changesets/action)
+      pull-requests: write # to create release PR (changesets/action)
       id-token: write # required for npm OIDC trusted publishing
     steps:
       - name: Checkout Repository
@@ -33,14 +33,13 @@ jobs:
       - name: Build Packages
         run: pnpm run build
 
-      - name: Create Release Pull Request
-        uses: changesets/action/version@v2.1.0
+      - name: Create Release Pull Request or Publish to npm
+        id: changesets
+        uses: changesets/action@v1
         with:
-          script: pnpm run version
-          commit-message: 'ci: release'
-          pr-title: 'ci: release'
-
-      - name: Publish to npm
-        uses: changesets/action/publish@v2.1.0
-        with:
-          script: pnpm exec changeset publish
+          version: pnpm run version
+          publish: pnpm exec changeset publish
+          commit: 'ci: release'
+          title: 'ci: release'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
