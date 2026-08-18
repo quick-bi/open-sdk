@@ -1,4 +1,4 @@
-import type { Interfaces } from "@quickbi/bi-open-sdk";
+import type { Interfaces } from '@quickbi/bi-open-sdk';
 
 const pageMeta: Interfaces.PageMeta = {};
 

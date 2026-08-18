@@ -67,7 +67,6 @@ export function mergeConfig(defaults: Record<string, any>, overrides: Record<str
 
 export function pick(obj: Record<string, any>, keys: string[]) {
   return keys.reduce<Record<string, any>>((acc, key) => {
-    // eslint-disable-next-line no-prototype-builtins
     if (obj.hasOwnProperty(key)) {
       acc[key] = obj[key];
     }
@@ -83,8 +82,7 @@ export function safeReadJson(filePath: string, defaultValue: any = null) {
 export function safeParseJson(json: string, defaultValue: any = null) {
   try {
     return JSON.parse(json);
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  } catch (e: any) {
+  } catch {
     return defaultValue;
   }
 }

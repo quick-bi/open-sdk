@@ -2,7 +2,9 @@
   "compilerOptions": {
     "lib": ["ES2022"],
     "module": "ESNext",
+    "types": ["node"],
     "noEmit": true,
+    "rootDir": "./src",
     "strict": true,
     "skipLibCheck": true,
     "isolatedModules": true,

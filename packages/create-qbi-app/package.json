@@ -8,8 +8,8 @@
   "scripts": {
     "build": "rslib build",
     "dev": "rslib build --watch",
-    "format": "prettier --write src",
-    "lint": "eslint src"
+    "format": "oxfmt src",
+    "lint": "oxlint src"
   },
   "engines": {
     "node": ">=22.20.0"
@@ -37,5 +37,8 @@
   "dependencies": {
     "@clack/prompts": "^0.11.0",
     "cac": "^6.7.14"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1"
   }
 }
