@@ -1,5 +1,11 @@
 # @quickbi/qbi-dev-tools
 
+## 1.0.6-beta.0
+
+### Patch Changes
+
+- 8e64f26: verify beta release pipeline with OIDC trusted publishing
+
 ## 1.0.5
 
 ### Patch Changes

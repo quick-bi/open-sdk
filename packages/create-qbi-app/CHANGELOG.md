@@ -1,5 +1,11 @@
 # create-qbi-app
 
+## 1.0.8-beta.0
+
+### Patch Changes
+
+- 8e64f26: verify beta release pipeline with OIDC trusted publishing
+
 ## 1.0.7
 
 ### Patch Changes
