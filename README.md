@@ -1,5 +1,7 @@
 # QuickBI Open SDK
 
+English | [简体中文](./README.zh-CN.md)
+
 This is a monorepo of Quick BI Open SDK, providing the toolchain for building custom components for [Quick BI](https://help.aliyun.com/zh/quick-bi/).
 
 ## Packages

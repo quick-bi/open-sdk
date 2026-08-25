@@ -1,5 +1,7 @@
 # @quickbi/qbi-dev-tools
 
+English | [简体中文](./README.zh-CN.md)
+
 This is a building tool for Quick BI custom components, powered by [Rspack](https://rspack.dev/).
 
 ## Usage

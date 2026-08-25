@@ -1,5 +1,7 @@
 # create-qbi-app
 
+English | [简体中文](./README.zh-CN.md)
+
 Scaffolding your Quick BI custom component project.
 
 ## Usage
