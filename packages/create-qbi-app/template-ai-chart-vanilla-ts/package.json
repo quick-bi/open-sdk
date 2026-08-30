@@ -1,0 +1,21 @@
+{
+  "name": "test-ai-component",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "qdt start",
+    "build": "qdt build",
+    "bundle": "qdt bundle",
+    "lint": "oxlint src",
+    "format": "oxfmt src"
+  },
+  "dependencies": {
+    "@quickbi/bi-open-sdk": "^4.0.2"
+  },
+  "devDependencies": {
+    "@quickbi/qbi-dev-tools": "^1.0.4",
+    "oxfmt": "^0.63.0",
+    "oxlint": "^1.78.0",
+    "typescript": "^7.0.2"
+  }
+}

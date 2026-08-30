@@ -30,6 +30,20 @@ const prompts: PromptOption[] = [
     ],
   },
   {
+    label: 'AI Dashboard Chart',
+    value: 'ai-chart',
+    children: [
+      {
+        label: 'React + TypeScript',
+        value: 'react-ts',
+      },
+      {
+        label: 'Vanilla + TypeScript',
+        value: 'vanilla-ts',
+      },
+    ],
+  },
+  {
     label: 'Custom Menu of Chart',
     value: 'menu-chart',
     link: 'https://help.aliyun.com/zh/quick-bi/user-guide/overview-of-custom-visualization?spm=a2c4g.11186623.help-menu-30343.d_2_10_4_0.2f795fb0wvme21&scm=20140722.H_3019886._.OR_help-T_cn~zh-V_1#b253a53779gj8',
