@@ -7,7 +7,8 @@ import { pathToFileURL } from 'node:url';
 import { init, parse } from 'es-module-lexer';
 
 const name = 'PackageJsonPlugin';
-const member = 'createBIComponent';
+/** 组件入口 wrapper (createBIComponent) 或 meta 声明函数 (defineMeta) 均可认定引用了 bi-open 系列库 */
+const member = /\b(createBIComponent|defineMeta)\b/;
 const libs = [
   '@quickbi/bi-open',
   '@quickbi/bi-open-sdk',
@@ -43,7 +44,7 @@ export class PackageJsonPlugin {
         const source = fs.readFileSync(this.mainEntry, { encoding: 'utf-8' });
         const [imports] = parse(source);
         const matched = imports.find(
-          item => importedLibs.includes(item.n!) && new RegExp(`\\b${member}\\b`).test(source.slice(item.ss, item.se)),
+          item => importedLibs.includes(item.n!) && member.test(source.slice(item.ss, item.se)),
         );
         const lib = matched?.n;
 

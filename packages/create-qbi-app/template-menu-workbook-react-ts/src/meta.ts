@@ -2,9 +2,10 @@
  * 自定义菜单元信息
  */
 import type { Interfaces } from '@quickbi/bi-open-menu-sdk';
+import { defineMeta } from '@quickbi/bi-open-menu-sdk';
 
 const menuMeta: Interfaces.MenuMeta = {
   order: 1, // 排列顺序, 从上到下
 };
 
-export default menuMeta;
+export default defineMeta(menuMeta);

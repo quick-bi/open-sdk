@@ -1,4 +1,5 @@
 import type { Interfaces } from '@quickbi/bi-open-sdk';
+import { defineMeta } from '@quickbi/bi-open-sdk';
 
 const componentMeta: Interfaces.ComponentMeta = {
   propsSchema: {
@@ -82,4 +83,4 @@ const componentMeta: Interfaces.ComponentMeta = {
   },
 };
 
-export default componentMeta;
+export default defineMeta(componentMeta);

@@ -1,5 +1,5 @@
 import type { Interfaces } from '@quickbi/bi-open-sdk';
-import { I18n } from '@quickbi/bi-open-sdk';
+import { I18n, defineMeta } from '@quickbi/bi-open-sdk';
 
 const i18n = I18n.init({
   resources: {
@@ -107,4 +107,4 @@ const componentMeta: Interfaces.ComponentMeta = {
   },
 };
 
-export default componentMeta;
+export default defineMeta(componentMeta);
