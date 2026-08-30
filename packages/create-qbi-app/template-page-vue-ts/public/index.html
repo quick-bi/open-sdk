@@ -3,23 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Quick BI Custom Component</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background: #fff;
+        color: #1f2937;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+      }
+      .container {
+        text-align: center;
+      }
+      .lang {
+        position: fixed;
+        top: 1rem;
+        right: 1.25rem;
+      }
+      .lang button {
+        background: none;
+        border: none;
+        font-size: 0.8rem;
+        color: #6b7280;
+        cursor: pointer;
+      }
+      .lang button:hover {
+        color: #1677ff;
+      }
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #1677ff, #4f8cff);
+      }
+      .logo svg {
+        width: 24px;
+        height: 24px;
+      }
+      h1 {
+        font-size: 1.15rem;
+        font-weight: 600;
+        margin-top: 0.9rem;
+      }
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        margin-top: 0.75rem;
+        font-size: 0.8rem;
+        color: #6b7280;
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #22c55e;
+      }
+      .footer {
+        margin-top: 1.5rem;
+        font-size: 0.78rem;
+        color: #9ca3af;
+      }
+      .footer a {
+        color: #6b7280;
+        text-decoration: none;
+      }
+      .footer a:hover {
+        color: #4096ff;
+        text-decoration: underline;
+      }
+      .sep {
+        margin: 0 0.35em;
+      }
+      [data-lang='zh'] .en,
+      [data-lang='en'] .zh {
+        display: none;
+      }
+    </style>
   </head>
-  <body>
-    <p>
-      Server is running...
-      <a
-        href="https://help.aliyun.com/zh/quick-bi/user-guide/development-process?spm=a2c4g.11186623.help-menu-30343.d_2_10_4_3.7c327eaeNkzLCd&scm=20140722.H_3019921._.OR_help-T_cn~zh-V_1#c71e9b3f6fdmm"
-        >How to debug</a
-      >
-    </p>
-    <ul>
-      <li>
-        <a href="/main.js">main.js</a>
-      </li>
-      <li>
-        <a href="/meta.js">meta.js</a>
-      </li>
-    </ul>
+  <body data-lang="zh">
+    <div class="lang"><button onclick="toggleLang()" id="langBtn">EN</button></div>
+    <div class="container">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="12" width="4" height="9" rx="1" fill="#fff" />
+          <rect x="10" y="7" width="4" height="14" rx="1" fill="#fff" opacity=".8" />
+          <rect x="17" y="3" width="4" height="18" rx="1" fill="#fff" opacity=".6" />
+        </svg>
+      </div>
+      <h1 class="zh">Quick BI 自定义组件</h1>
+      <h1 class="en">Quick BI Custom Component</h1>
+      <div class="status">
+        <span class="dot"></span>
+        <span class="zh">开发服务已启动</span>
+        <span class="en">Dev server is running</span>
+      </div>
+      <div class="footer">
+        <span class="zh">
+          <a href="https://help.aliyun.com/zh/quick-bi/user-guide/development-process" target="_blank" rel="noopener"
+            >调试指南</a
+          >
+          <span class="sep">&middot;</span>
+          <a href="https://help.aliyun.com/zh/quick-bi/user-guide/getting-started-1" target="_blank" rel="noopener"
+            >开发文档</a
+          >
+        </span>
+        <span class="en">
+          <a href="https://help.aliyun.com/zh/quick-bi/user-guide/development-process" target="_blank" rel="noopener"
+            >Debugging</a
+          >
+          <span class="sep">&middot;</span>
+          <a href="https://help.aliyun.com/zh/quick-bi/user-guide/getting-started-1" target="_blank" rel="noopener"
+            >Documentation</a
+          >
+        </span>
+      </div>
+    </div>
+    <script>
+      function toggleLang() {
+        var b = document.body,
+          z = b.dataset.lang === 'zh';
+        b.dataset.lang = z ? 'en' : 'zh';
+        document.getElementById('langBtn').textContent = z ? '中文' : 'EN';
+      }
+    </script>
   </body>
 </html>
