@@ -16,7 +16,7 @@ const i18n = I18n.init({
   },
 });
 
-const componentMeta: Interfaces.ComponentMeta = {
+export default defineMeta<Interfaces.ComponentMeta>({
   propsSchema: {
     styleSchema: {
       schema: {
@@ -105,6 +105,4 @@ const componentMeta: Interfaces.ComponentMeta = {
       },
     },
   },
-};
-
-export default defineMeta(componentMeta);
+});

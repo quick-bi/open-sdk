@@ -1,7 +1,7 @@
 import type { Interfaces } from '@quickbi/bi-open-vue-sdk';
 import { defineMeta } from '@quickbi/bi-open-vue-sdk';
 
-const componentMeta: Interfaces.ComponentMeta = {
+export default defineMeta<Interfaces.ComponentMeta>({
   propsSchema: {
     styleSchema: {
       schema: {
@@ -81,6 +81,4 @@ const componentMeta: Interfaces.ComponentMeta = {
       },
     },
   },
-};
-
-export default defineMeta(componentMeta);
+});

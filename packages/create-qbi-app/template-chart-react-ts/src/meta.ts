@@ -1,7 +1,7 @@
 import type { Interfaces } from '@quickbi/bi-open-react-sdk';
 import { defineMeta } from '@quickbi/bi-open-react-sdk';
 
-const componentMeta: Interfaces.ComponentMeta = {
+export default defineMeta<Interfaces.ComponentMeta>({
   propsSchema: {
     styleSchema: {
       schema: {
@@ -82,6 +82,4 @@ const componentMeta: Interfaces.ComponentMeta = {
       },
     },
   },
-};
-
-export default defineMeta(componentMeta);
+});
