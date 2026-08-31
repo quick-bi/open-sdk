@@ -1,5 +1,12 @@
 # @quickbi/qbi-dev-tools
 
+## 1.0.6
+
+### Patch Changes
+
+- 8e64f26: verify beta release pipeline with OIDC trusted publishing
+- fcf1019: Add ai custom component templates
+
 ## 1.0.6-beta.0
 
 ### Patch Changes

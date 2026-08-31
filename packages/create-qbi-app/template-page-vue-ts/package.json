@@ -14,7 +14,7 @@
     "vue": "^3.0.11"
   },
   "devDependencies": {
-    "@quickbi/qbi-dev-tools": "^1.0.5",
+    "@quickbi/qbi-dev-tools": "^1.0.6",
     "oxfmt": "^0.63.0",
     "oxlint": "^1.78.0",
     "rspack-vue-loader": "^17.6.2",

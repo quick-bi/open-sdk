@@ -1,9 +1,0 @@
-{
-  "mode": "exit",
-  "tag": "beta",
-  "initialVersions": {
-    "create-qbi-app": "1.0.7",
-    "@quickbi/qbi-dev-tools": "1.0.5"
-  },
-  "changesets": ["beta-pipeline-test"]
-}
