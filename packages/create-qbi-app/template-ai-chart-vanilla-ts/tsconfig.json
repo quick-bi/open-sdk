@@ -2,7 +2,6 @@
   "compilerOptions": {
     "lib": ["DOM", "ES2022"],
     "module": "ESNext",
-    "jsx": "react-jsx",
     "strict": true,
     "skipLibCheck": true,
     "isolatedModules": true,

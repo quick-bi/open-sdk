@@ -6,7 +6,7 @@ const MyComponent: React.FC<Interfaces.AIComponentProps> = React.memo(props => {
   const { data, encoding } = props;
 
   React.useEffect(() => {
-    console.log('trigger when component mount', props);
+    console.log('trigger when component mount');
   }, []);
 
   return (
