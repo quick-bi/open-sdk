@@ -19,7 +19,7 @@
     "lint": "oxlint",
     "format": "oxfmt",
     "format:check": "oxfmt --check",
-    "version": "changeset version && pnpm install",
+    "version": "changeset version && tsx scripts/sync-template-deps.ts && pnpm install",
     "prepare": "husky"
   },
   "devDependencies": {
