@@ -40,27 +40,14 @@ Available templates:
 
 For how to develop and publish Quick BI custom components, please refer to the [documentation](https://help.aliyun.com/zh/quick-bi/user-guide/getting-started-1).
 
-## Development
+## Contributing
 
-Requirements: Node.js >= 22.20.0, pnpm 10.
-
-```bash
-pnpm i          # install dependencies
-pnpm build      # build all packages
-pnpm lint       # lint with oxlint
-pnpm format     # format with oxfmt
-```
-
-Commits are checked by commitlint ([conventional commits](https://www.conventionalcommits.org/)) via husky.
-
-## Releasing
-
-This repo uses [Changesets](https://github.com/changesets/changesets) for versioning and publishing.
-
-Before publishing, record your changes:
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for local setup, commit convention, changesets and the PR workflow. TL;DR:
 
 ```bash
-pnpm exec changeset
+pnpm i && pnpm build          # Node >= 22.20.0, pnpm 10
+pnpm lint && pnpm format      # oxlint + oxfmt
+pnpm exec changeset           # record user-facing changes
 ```
 
-Then commit the generated changeset file along with your code. The release workflow will create a version PR that bumps versions, updates changelogs and publishes packages to npm.
+Commits follow [conventional commits](https://www.conventionalcommits.org/); releases are handled by [Changesets](https://github.com/changesets/changesets) via a publish workflow.

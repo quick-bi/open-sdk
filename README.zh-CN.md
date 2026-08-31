@@ -40,27 +40,14 @@ npm init qbi-app@latest my-app -t chart-react-ts
 
 自定义组件的开发与发布流程，请参考[帮助文档](https://help.aliyun.com/zh/quick-bi/user-guide/getting-started-1)。
 
-## 本地开发
+## 参与贡献
 
-环境要求：Node.js >= 22.20.0，pnpm 10。
-
-```bash
-pnpm i          # 安装依赖
-pnpm build      # 构建所有包
-pnpm lint       # 使用 oxlint 检查代码
-pnpm format     # 使用 oxfmt 格式化代码
-```
-
-提交信息由 husky 调用 commitlint 校验（[约定式提交](https://www.conventionalcommits.org/)）。
-
-## 版本发布
-
-本仓库使用 [Changesets](https://github.com/changesets/changesets) 管理版本与发布。
-
-发布前先记录变更：
+详见 [CONTRIBUTING.zh-CN.md](./CONTRIBUTING.zh-CN.md)，包含本地开发、提交规范、changeset 与 PR 流程。要点速览：
 
 ```bash
-pnpm exec changeset
+pnpm i && pnpm build          # Node >= 22.20.0，pnpm 10
+pnpm lint && pnpm format      # oxlint + oxfmt
+pnpm exec changeset           # 用 changeset 记录用户可见的变更
 ```
 
-然后将生成的 changeset 文件随代码一起提交。发布工作流会自动创建版本 PR，完成版本号升级、更新 changelog 并发布包到 npm。
+提交信息遵循 [约定式提交](https://www.conventionalcommits.org/)；发布由 [Changesets](https://github.com/changesets/changesets) 通过发布工作流完成。
