@@ -10,11 +10,11 @@
     "format": "oxfmt src"
   },
   "dependencies": {
-    "@quickbi/bi-open-vue-sdk": "^1.0.3",
+    "@quickbi/bi-open-vue-sdk": "^1.0.6",
     "vue": "^3.0.11"
   },
   "devDependencies": {
-    "@quickbi/qbi-dev-tools": "^1.0.4",
+    "@quickbi/qbi-dev-tools": "^1.0.5",
     "oxfmt": "^0.63.0",
     "oxlint": "^1.78.0",
     "rspack-vue-loader": "^17.6.2",

@@ -1,7 +1,7 @@
 import type { Interfaces } from '@quickbi/bi-open-sdk';
 import { defineMeta } from '@quickbi/bi-open-sdk';
 
-export default defineMeta<Interfaces.AICustomComponentMeta>({
+export default defineMeta<Interfaces.AIComponentMeta>({
   dataSchema: {
     areas: [
       {
