@@ -2,18 +2,21 @@ import type { Interfaces } from '@quickbi/bi-open-sdk';
 import './component.scss';
 
 class MyComponent {
-  render(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
-    const viewConfig = props.customProps!.viewConfig;
+  render(props: Interfaces.LifecycleProps<Interfaces.AIComponentProps>) {
+    const customProps = props.customProps!;
+    const { data, encoding } = customProps;
 
-    props.container!.textContent = `I ${viewConfig?.fruit?.apple ? 'like' : "don't like"} apple, I want to eat ${
-      viewConfig?.fruit?.banana
-    } banana`;
+    props.container!.innerHTML = `<pre>${JSON.stringify(
+      { encoding, rowCount: data?.values?.length ?? 0 },
+      null,
+      2,
+    )}</pre>`;
   }
 
   /**
    * trigger when component mounted
    */
-  mount(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
+  mount(props: Interfaces.LifecycleProps<Interfaces.AIComponentProps>) {
     props.container!.classList.add('test-component');
     console.log('trigger when component mount', props);
     this.render(props);
@@ -22,7 +25,7 @@ class MyComponent {
   /**
    * trigger when component updated
    */
-  update(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
+  update(props: Interfaces.LifecycleProps<Interfaces.AIComponentProps>) {
     console.log('trigger when component update', props);
     this.render(props);
   }
@@ -30,7 +33,7 @@ class MyComponent {
   /**
    * trigger when component unmount
    */
-  unmount(props: Interfaces.LifecycleProps<Interfaces.ComponentProps>) {
+  unmount(props: Interfaces.LifecycleProps<Interfaces.AIComponentProps>) {
     console.log('trigger when component unmount', props);
   }
 }

@@ -1,7 +1,0 @@
-{
-  "config": {
-    "externalAssets": [
-      { "name": "echarts", "global": "echarts", "url": "https://cdn.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js" }
-    ]
-  }
-}
