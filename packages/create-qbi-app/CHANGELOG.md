@@ -1,5 +1,12 @@
 # create-qbi-app
 
+## 1.0.8
+
+### Patch Changes
+
+- 8e64f26: verify beta release pipeline with OIDC trusted publishing
+- fcf1019: Add ai custom component templates
+
 ## 1.0.8-beta.0
 
 ### Patch Changes
