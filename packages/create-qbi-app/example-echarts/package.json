@@ -10,7 +10,7 @@
     "format": "oxfmt src"
   },
   "dependencies": {
-    "@quickbi/bi-open-sdk": "^4.0.2",
+    "@quickbi/bi-open-sdk": "^4.0.4",
     "echarts": "5.4.0"
   },
   "devDependencies": {

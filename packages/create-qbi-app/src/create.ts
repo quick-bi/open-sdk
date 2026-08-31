@@ -42,9 +42,12 @@ function copy(src: string, dest: string) {
   }
 }
 
+const SKIP_FILES = new Set(['node_modules', 'package-lock.json', '.DS_Store']);
+
 function copyDir(srcDir: string, destDir: string) {
   fs.mkdirSync(destDir, { recursive: true });
   for (const file of fs.readdirSync(srcDir)) {
+    if (SKIP_FILES.has(file)) continue;
     const srcFile = path.resolve(srcDir, file);
     const destFile = path.resolve(destDir, file);
     copy(srcFile, destFile);
