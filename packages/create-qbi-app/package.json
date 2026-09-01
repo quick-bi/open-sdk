@@ -1,6 +1,6 @@
 {
   "name": "create-qbi-app",
-  "version": "1.0.8-beta.0",
+  "version": "1.0.8",
   "description": "Create a new Quick BI project",
   "author": "Quick BI",
   "license": "MIT",

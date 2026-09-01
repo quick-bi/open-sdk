@@ -1,7 +1,8 @@
 import path from 'node:path';
 import * as sass from 'sass-embedded';
 import { fileURLToPath } from 'node:url';
-import type { Configuration, RuleSetUseItem } from '@rspack/core';
+import type { IncomingMessage } from 'node:http';
+import type { Configuration, DevServerHeaders, RuleSetUseItem } from '@rspack/core';
 import {
   ProgressPlugin,
   CssExtractRspackPlugin,
@@ -162,11 +163,17 @@ export function getBuiltinConfig({ mode = 'development' }: Option): Configuratio
         directory: path.resolve(process.cwd(), 'public'),
         publicPath: '/',
       },
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': 'true',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-        'Access-Control-Allow-Headers': '*',
+      headers: (req: IncomingMessage): DevServerHeaders => {
+        const origin = req.headers.origin;
+        const requestHeaders = req.headers['access-control-request-headers'];
+
+        return [
+          { key: 'Access-Control-Allow-Origin', value: origin || '*' },
+          { key: 'Access-Control-Allow-Credentials', value: 'true' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, POST, PUT, DELETE, PATCH, OPTIONS' },
+          { key: 'Access-Control-Allow-Headers', value: requestHeaders || 'content-type' },
+          { key: 'Access-Control-Allow-Private-Network', value: 'true' },
+        ];
       },
       hot: false,
       client: false,
