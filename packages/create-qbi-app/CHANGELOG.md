@@ -1,5 +1,11 @@
 # create-qbi-app
 
+## 1.0.9
+
+### Patch Changes
+
+- e941279: Fix Cross Domain Error
+
 ## 1.0.8
 
 ### Patch Changes
