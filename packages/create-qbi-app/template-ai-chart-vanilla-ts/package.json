@@ -13,7 +13,7 @@
     "@quickbi/bi-open-sdk": "^4.0.5"
   },
   "devDependencies": {
-    "@quickbi/qbi-dev-tools": "^1.0.6",
+    "@quickbi/qbi-dev-tools": "^1.0.7",
     "oxfmt": "^0.63.0",
     "oxlint": "^1.78.0",
     "typescript": "^7.0.2"

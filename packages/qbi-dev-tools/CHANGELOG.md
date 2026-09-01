@@ -1,5 +1,11 @@
 # @quickbi/qbi-dev-tools
 
+## 1.0.7
+
+### Patch Changes
+
+- e941279: Fix Cross Domain Error
+
 ## 1.0.6
 
 ### Patch Changes
